@@ -1,0 +1,36 @@
+{
+  "device_context": {
+    "device_type": "#%@$iphone",
+    "device_id": "UNIQUE-ID-1234-ABCD",
+    "device_data": {
+      "carrier": "AT&T",
+      "connection_type": "WiFi"
+    },
+    "build_id": "5.9.4.20",
+    "user_id": "jrecursive",
+    "page": {
+      "name": "player",
+      "args": {
+        "video_id": "h:123456"
+      }
+    },
+    "ts": 1234567890,
+    "tz": "EDT"
+  },
+  "events": [
+    {
+      "noun": "artist",
+      "location": "loc"
+    },
+    {
+      "verb": "follow",
+      "noun": "artist",
+      "location": "loc"
+    },
+    {
+      "verb": "follow",
+      "noun": "artist",
+      "location": "loc"
+    }
+  ]
+}

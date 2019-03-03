@@ -1,0 +1,62 @@
+{
+  "header": {
+    "event_id": "123",
+    "event_type": "endo",
+    "components": [
+      {
+        "name": "event-collector",
+        "version": "1.01",
+        "build_id": "123",
+        "temporal": {
+          "granularity": "milliseconds",
+          "detection": 1464105187480,
+          "consumption": 1464105187481
+        }
+      },
+      {
+        "name": "event-collector",
+        "version": "1.01",
+        "build_id": "123",
+        "temporal": {
+          "granularity": "milliseconds",
+          "detection": 1464105187482,
+          "consumption": 1464105187483
+        }
+      }
+    ]
+  },
+  "device_context": {
+    "user_id": null,
+    "anon_id": "fcf43d07-f9df-4a89-8d05-c680732aa01e",
+    "app_version": "0.3",
+    "build_number": "65",
+    "device": "web",
+    "radio_type": "unknown",
+    "resolution": "2560x1440",
+    "platform": "web",
+    "syn_id": "bb8a16ab-1279-4f17-969b-1dba5eb60eda",
+    "_site": "vevo-prod",
+    "referrer": ""
+  },
+  "event": {
+    "asset_name": "vevo.Feel-The-Music-Presented-by-Pandora",
+    "video_id": "TIVEV1668184",
+    "noun": "video",
+    "noun_id": "TIVEV1668184",
+    "location": "browse_genre_all_videos",
+    "is_ad": "no",
+    "playlist_name": "no playlist",
+    "play_id": "8e8b6a85-1a59-4539-9651-7798e9ae823e",
+    "name": "heartbeat",
+    "stream_count": 2,
+    "time": 192570,
+    "duration": 256823,
+    "playlist_id": "no playlist",
+    "is_ad_bool": false,
+    "primary_artist": "vevo",
+    "title": "Feel-The-Music-Presented-by-Pandora",
+    "ad_type": null,
+    "verb": "heartbeat",
+    "timestamp": 1464105187480
+  }
+}

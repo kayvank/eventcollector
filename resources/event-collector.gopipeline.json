@@ -1,0 +1,249 @@
+{
+  "name": "eventcollector",
+  "environment_variables": [
+    {
+      "secure": false,
+      "name": "DOCKER_NODE_VERSION",
+      "value": "9.2-wheezy"
+    }
+  ],
+  "group": "data-team",
+  "materials": [
+    {
+      "url": "git@github.com:VEVO/eventcollector.git",
+      "type": "git"
+    }
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "fetch_materials": true,
+      "never_cleanup_artifacts": false,
+      "clean_working_directory": false,
+      "environment_variables": [],
+      "jobs": [
+        {
+          "name": "build",
+          "environment_variables": [
+            {
+              "secure": false,
+              "name": "SLACK_CHANNELS_SUCCESS",
+              "value": "##data-builds"
+            },
+            {
+              "secure": false,
+              "name": "SLACK_CHANNELS_FAILURE",
+              "value": "##data-builds"
+            }
+          ],
+          "tabs": [],
+          "resources": [],
+          "artifacts": [],
+          "properties": [],
+          "run_instance_count": null,
+          "timeout": 0,
+          "tasks": [
+            {
+              "type": "exec",
+              "command": "make",
+              "arguments": [
+                "build"
+              ]
+            },
+            {
+              "type": "exec",
+              "command": "make",
+              "arguments": [
+                "slack_failure"
+              ],
+              "run_if": "failed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "dev",
+      "fetch_materials": true,
+      "never_cleanup_artifacts": false,
+      "clean_working_directory": false,
+      "environment_variables": [],
+      "jobs": [
+        {
+          "name": "dev",
+          "environment_variables": [
+            {
+              "value": "dev",
+              "secure": false,
+              "name": "AWS_ACCOUNT"
+            },
+            {
+              "secure": false,
+              "name": "SLACK_CHANNELS_SUCCESS",
+              "value": "##data-deploys"
+            },
+            {
+              "secure": false,
+              "name": "SLACK_CHANNELS_FAILURE",
+              "value": "##data-deploys"
+            }
+          ],
+          "tabs": [],
+          "resources": [],
+          "artifacts": [],
+          "properties": [],
+          "run_instance_count": null,
+          "timeout": 0,
+          "tasks": [
+            {
+              "type": "exec",
+              "command": "make",
+              "arguments": [
+                "dev"
+              ]
+            },
+            {
+              "type": "exec",
+              "command": "make",
+              "arguments": [
+                "slack_failure"
+              ],
+              "run_if": "failed"
+            },
+            {
+              "type": "exec",
+              "command": "make",
+              "arguments": [
+                "slack_success"
+              ],
+              "run_if": "passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "stg",
+      "fetch_materials": true,
+      "never_cleanup_artifacts": false,
+      "clean_working_directory": false,
+      "environment_variables": [],
+      "jobs": [
+        {
+          "name": "stg",
+          "environment_variables": [
+            {
+              "value": "stg",
+              "secure": false,
+              "name": "AWS_ACCOUNT"
+            },
+            {
+              "secure": false,
+              "name": "SLACK_CHANNELS_SUCCESS",
+              "value": "##data-deploys"
+            },
+            {
+              "secure": false,
+              "name": "SLACK_CHANNELS_FAILURE",
+              "value": "##data-deploys"
+            }
+          ],
+          "tabs": [],
+          "resources": [],
+          "artifacts": [],
+          "properties": [],
+          "run_instance_count": null,
+          "timeout": 0,
+          "tasks": [
+            {
+              "type": "exec",
+              "command": "make",
+              "arguments": [
+                "stg"
+              ]
+            },
+            {
+              "type": "exec",
+              "command": "make",
+              "arguments": [
+                "slack_failure"
+              ],
+              "run_if": "failed"
+            },
+            {
+              "type": "exec",
+              "command": "make",
+              "arguments": [
+                "slack_success"
+              ],
+              "run_if": "passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "prd",
+      "approval": {
+        "type": "manual"
+      },
+      "fetch_materials": true,
+      "never_cleanup_artifacts": false,
+      "clean_working_directory": false,
+      "environment_variables": [],
+      "jobs": [
+        {
+          "name": "prd",
+          "environment_variables": [
+            {
+              "value": "prd",
+              "secure": false,
+              "name": "AWS_ACCOUNT"
+            },
+            {
+              "secure": false,
+              "name": "SLACK_CHANNELS_SUCCESS",
+              "value": "##production-releases"
+            },
+            {
+              "secure": false,
+              "name": "SLACK_CHANNELS_FAILURE",
+              "value": "##data-deploys"
+            }
+          ],
+          "tabs": [],
+          "resources": [],
+          "artifacts": [],
+          "properties": [],
+          "run_instance_count": null,
+          "timeout": 0,
+          "tasks": [
+            {
+              "type": "exec",
+              "command": "make",
+              "arguments": [
+                "prd"
+              ]
+            },
+            {
+              "type": "exec",
+              "command": "make",
+              "arguments": [
+                "slack_failure"
+              ],
+              "run_if": "failed"
+            },
+            {
+              "type": "exec",
+              "command": "make",
+              "arguments": [
+                "slack_success"
+              ],
+              "run_if": "passed"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

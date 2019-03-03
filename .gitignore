@@ -1,0 +1,18 @@
+target
+**/*.log
+logs
+target/
+tags
+TAGS
+.TAGS
+.tags
+**/.\#*
+.history
+.cache
+.DS_Store
+*.swp
+buildinfo.properties
+native/
+## local overrides
+src/main/resources/local.conf
+.envrc

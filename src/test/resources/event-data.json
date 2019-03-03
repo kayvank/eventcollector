@@ -1,0 +1,46 @@
+{
+  "device_context": {
+    "user_id": "33758726",
+    "anon_id": "68223729",
+    "app_version": "prd-0.3",
+    "build_number": "407-b19",
+    "device": "web",
+    "radio_type": "unknown",
+    "resolution": "1440x900",
+    "platform": "web",
+    "syn_id": "bb8a16ab-1279-4f17-969b-1dba5eb60eda",
+    "_site": "vevo-prod",
+    "referrer": ""
+  },
+  "events": [
+    {
+      "qos_quality": 995548,
+      "asset_name": "elton-john.Sacrifice",
+      "video_id": "GBJ330400239",
+      "noun": "video",
+      "noun_id": "GBJ330400239",
+      "location": "player",
+      "qos_stream_type": "HLS-MSE",
+      "qos_buffering_spinner_duration": 19,
+      "qos_buffering_spinner_events": 1,
+      "qos_buffering_at_end": false,
+      "qos_startup_time": 19,
+      "is_ad": "no",
+      "playlist_name": "no playlist",
+      "play_id": "45a6eba8-042b-4f66-8a8c-f5dd5993f8ff",
+      "name": "start-stream",
+      "stream_count": 1,
+      "time": 0,
+      "duration": 289919,
+      "playlist_id": "no playlist",
+      "is_ad_bool": false,
+      "primary_artist": "elton-john",
+      "title": "Sacrifice",
+      "ad_type": null,
+      "url": "https://www.vevo.com/watch/elton-john/Sacrifice/GBJ330400239",
+      "verb": "play",
+      "timestamp": 1478368812872
+    }
+  ],
+  "sent_at": 1478368812877
+}

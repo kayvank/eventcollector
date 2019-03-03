@@ -1,0 +1,60 @@
+* floss-event-collector 
+** tl;dr
+ To open source or not to open source the event-collector. 
+ Deciding factors :
+** tech-debt
+*** DONE [[https://docs.google.com/presentation/d/1KAYc0EwhGQSqCzVBx4fEhfKDWxD6hS9GUvB5XMgh8uI/edit#slide=id.p3][slides]]
+    CLOSED: [2018-02-07 Wed 13:18]
+*** TODO blog posts
+**** Estimated effort, NA
+*** non Genesis 
+*** nFS compliance
+**** nFS API Payloads
+***** DONE CORS
+      CLOSED: [2018-02-07 Wed 12:33]
+***** DONE Country Header
+      CLOSED: [2018-02-07 Wed 12:33]
+***** DONE paging
+      CLOSED: [2018-02-07 Wed 12:33]
+***** TODO Errors
+****** returns JSON validation failure
+******* Estimated effort, 1-2 hours
+**** nFS Requirements 
+***** DONE Pre-code [1/1]
+      CLOSED: [2018-02-07 Wed 12:41]
+***** DONE Code[10/10]
+      CLOSED: [2018-02-07 Wed 12:44]
+****** DONE no secrets
+       CLOSED: [2018-02-07 Wed 13:12]
+****** DONE stateless
+       CLOSED: [2018-02-07 Wed 13:12]
+****** DONE github
+       CLOSED: [2018-02-07 Wed 13:12]
+****** DONE sbt to manage dependencies
+       CLOSED: [2018-02-07 Wed 13:12]
+****** DONE no hard-coded dependencies
+       CLOSED: [2018-02-07 Wed 13:12]
+****** DONE environment driven configuration
+       CLOSED: [2018-02-07 Wed 13:12]
+****** DONE Compliant with nFS API payloads v.9
+       CLOSED: [2018-02-07 Wed 13:12]
+****** DONE RESfull endpoints
+       CLOSED: [2018-02-07 Wed 13:12]
+***** DONE Build[2/2]
+      CLOSED: [2018-02-07 Wed 12:45]
+****** DONE run book covers Build instruction
+       CLOSED: [2018-02-07 Wed 13:12]
+***** TODO Test[0/1]
+****** TODO 47%  
+******* estimated effort, 2-3 hours
+***** DONE First Release[3/3]
+      CLOSED: [2018-02-07 Wed 13:11]
+****** code review & brown bag
+****** DONE have runbook 
+       CLOSED: [2018-02-07 Wed 13:12]
+****** DONE caching
+       CLOSED: [2018-02-07 Wed 13:12]
+***** DONE Post Release [1/1]
+      CLOSED: [2018-02-07 Wed 13:15]
+****** DONE share lessons learned
+       CLOSED: [2018-02-07 Wed 13:15]

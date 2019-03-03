@@ -1,0 +1,10 @@
+<configuration scan="false" debug="false">
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%date - [%level] - from %logger in %thread %message%n%xException%n</pattern>
+        </encoder>
+    </appender>
+    <root level="ERROR">
+        <appender-ref ref="stdout"/>
+    </root>
+</configuration>

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="3.2" jmeter="3.3 r1808647">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="EC Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Tgood-user Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">3</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">2</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1501265605000</longProp>
+        <longProp name="ThreadGroup.end_time">1501265605000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP bad Request" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+   &quot;metadata&quot; : {&#xd;
+     &quot;event_type&quot; : &quot;endo-1.0&quot;,&#xd;
+     &quot;app_name&quot; : &quot;event-collector&quot;,&#xd;
+     &quot;app_version&quot; : &quot;2.1.0&quot;,&#xd;
+     &quot;build_number&quot; : &quot;1&quot;,&#xd;
+     &quot;timestamp&quot; : 1493422903450&#xd;
+   },&#xd;
+   &quot;event_id&quot; : &quot;728dc062-afeb-42f3-b8e1-5274fc716d9f&quot;,&#xd;
+   &quot;event_data&quot; : {&#xd;
+     &quot;qos_stream_type&quot; : &quot;MP4&quot;,&#xd;
+     &quot;ad_type&quot; : null,&#xd;
+     &quot;qos_buffering_at_end&quot; : false,&#xd;
+     &quot;playlist_name&quot; : &quot;no playlist&quot;,&#xd;
+     &quot;auto_play&quot; : true,&#xd;
+     &quot;duration&quot; : 283866,&#xd;
+     &quot;noun_id&quot; : &quot;USRV81700408&quot;,&#xd;
+     &quot;is_ad_bool&quot; : false,&#xd;
+     &quot;timestamp&quot; : 1493422091706,&#xd;
+     &quot;title&quot; : &quot;love-galore&quot;,&#xd;
+     &quot;custom&quot; : {&#xd;
+       &quot;v1&quot; : &quot;k1&quot;,&#xd;
+       &quot;v2&quot; : &quot;k2&quot;,&#xd;
+       &quot;v3&quot; : &quot;k3&quot;,&#xd;
+       &quot;v4&quot; : &quot;k4&quot;&#xd;
+     },&#xd;
+     &quot;playlist_id&quot; : &quot;no playlist&quot;,&#xd;
+     &quot;location&quot; : &quot;_watch&quot;,&#xd;
+     &quot;qos_startup_time&quot; : 21350,&#xd;
+     &quot;is_ad&quot; : &quot;no&quot;,&#xd;
+     &quot;play_id&quot; : &quot;2e342d8d-2cbb-4e3a-ba13-357cfa138da0&quot;,&#xd;
+     &quot;asset_name&quot; : &quot;sza.love-galore&quot;,&#xd;
+     &quot;verb&quot; : &quot;play&quot;,&#xd;
+     &quot;primary_artist&quot; : &quot;sza&quot;,&#xd;
+     &quot;noun&quot; : &quot;video&quot;,&#xd;
+     &quot;name&quot; : &quot;start-stream&quot;,&#xd;
+     &quot;stream_count&quot; : 1,&#xd;
+     &quot;video_id&quot; : &quot;USRV81700408&quot;,&#xd;
+     &quot;bandwidth&quot; : 2,&#xd;
+     &quot;qos_buffering_spinner_events&quot; : 1,&#xd;
+     &quot;url&quot; : &quot;https://www.vevo.com/watch/sza/love-galore/USRV81700408&quot;,&#xd;
+     &quot;qos_buffering_spinner_duration&quot; : 21350,&#xd;
+     &quot;time&quot; : 0&#xd;
+   },&#xd;
+   &quot;device_context&quot; : {&#xd;
+     &quot;syn_id&quot; : &quot;bb8a16ab-1279-4f17-969b-1dba5eb60eda&quot;,&#xd;
+     &quot;user_id&quot; : &quot;33758726&quot;,&#xd;
+     &quot;build_number&quot; : &quot;407-b119&quot;,&#xd;
+     &quot;referrer&quot; : &quot;&quot;,&#xd;
+     &quot;radio_type&quot; : &quot;unknown&quot;,&#xd;
+     &quot;platform&quot; : &quot;web&quot;,&#xd;
+     &quot;_site&quot; : &quot;vevo-prod&quot;,&#xd;
+     &quot;device&quot; : &quot;web&quot;,&#xd;
+     &quot;anon_id&quot; : &quot;118091917&quot;,&#xd;
+     &quot;app_version&quot; : &quot;0.3&quot;,&#xd;
+     &quot;resolution&quot; : &quot;3008x1692&quot;&#xd;
+   },&#xd;
+   &quot;sent_at&quot; : 1493422091714,&#xd;
+   &quot;geo_ip&quot; : {&#xd;
+     &quot;ip_address&quot; : &quot;10.0.21.17&quot;,&#xd;
+     &quot;lat&quot; : 0,&#xd;
+     &quot;lng&quot; : 0,&#xd;
+     &quot;city&quot; : &quot;&quot;,&#xd;
+     &quot;region&quot; : &quot;&quot;,&#xd;
+     &quot;postal_code&quot; : &quot;&quot;,&#xd;
+     &quot;country&quot; : &quot;&quot;&#xd;
+   },&#xd;
+   &quot;http_user_agent&quot; : &quot;python-requests/2.11.1&quot;,&#xd;
+   &quot;ip_address&quot; : &quot;10.0.21.17&quot;&#xd;
+ }&#xd;
+</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">localhost</stringProp>
+          <stringProp name="HTTPSampler.port">9000</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/event/endo</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP good Request" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">&#xd;
+{&#xd;
+  &quot;events&quot;: [&#xd;
+    {&#xd;
+      &quot;custom&quot;: {&#xd;
+        &quot;ios-key3&quot;: {&#xd;
+          &quot;i-inner-key2&quot;: &quot;ios-val-2&quot;,&#xd;
+          &quot;i-inner-key1&quot;: &quot;ios-val-1&quot;&#xd;
+        },&#xd;
+        &quot;ios-key2&quot;: &quot;ios-2&quot;,&#xd;
+        &quot;ios-key1&quot;: &quot;ios-1&quot;&#xd;
+      },&#xd;
+      &quot;location&quot;: &quot;unknown&quot;,&#xd;
+      &quot;verb&quot;: &quot;report&quot;,&#xd;
+      &quot;noun&quot;: &quot;custom&quot;,&#xd;
+      &quot;is_ad_bool&quot;: false,&#xd;
+      &quot;ad_type&quot;: null,&#xd;
+      &quot;url&quot;: null,&#xd;
+      &quot;is_ad&quot;: &quot;no&quot;,&#xd;
+      &quot;timestamp&quot;: 1494016874409,&#xd;
+      &quot;selected&quot;: false&#xd;
+    }&#xd;
+  ],&#xd;
+  &quot;device_context&quot;: {&#xd;
+    &quot;user_id&quot;: &quot;89224496&quot;,&#xd;
+    &quot;anon_id&quot;: &quot;230bfee1-27f7-4552-bf61-cf90269ce71e&quot;,&#xd;
+    &quot;app_version&quot;: &quot;DEBUG&quot;,&#xd;
+    &quot;build_number&quot;: 1750000000,&#xd;
+    &quot;device&quot;: &quot;Android&quot;,&#xd;
+    &quot;radio_type&quot;: &quot;unknown&quot;,&#xd;
+    &quot;resolution&quot;: &quot;1080x1794&quot;,&#xd;
+    &quot;platform&quot;: &quot;android&quot;,&#xd;
+    &quot;syn_id&quot;: &quot;34eed795-99bb-482e-993f-5362e3225d9f&quot;,&#xd;
+    &quot;_site&quot;: &quot;android-prod&quot;,&#xd;
+    &quot;heartbeat_interval&quot;: 5000&#xd;
+  }&#xd;
+}&#xd;
+</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">localhost</stringProp>
+          <stringProp name="HTTPSampler.port">9000</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/event/endo</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+    </hashTree>
+    <WorkBench guiclass="WorkBenchGui" testclass="WorkBench" testname="WorkBench" enabled="true">
+      <boolProp name="WorkBench.save">true</boolProp>
+    </WorkBench>
+    <hashTree/>
+  </hashTree>
+</jmeterTestPlan>
